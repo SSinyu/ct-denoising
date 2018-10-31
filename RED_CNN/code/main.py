@@ -18,13 +18,13 @@ print('pwd : {}'.format(os.getcwd()))
 
 parser = argparse.ArgumentParser(description='')
 #set load directory
-parser.add_argument('--dcm_path', dest='dcm_path', default= '/data1/AAPM-Mayo-CT-Challenge', help='dicom file directory')
+parser.add_argument('--dcm_path', dest='dcm_path', default= '/data/private/CT_image', help='dicom file directory')
 parser.add_argument('--LDCT_path', dest='LDCT_path', default= 'quarter_3mm', help='LDCT image folder name')
 parser.add_argument('--NDCT_path', dest='NDCT_path', default= 'full_3mm', help='NDCT image folder name')
 parser.add_argument('--test_patient_no', dest='test_patient_no',type=ut.ParseList, default= 'L067,L291')
 
 #set save directory
-parser.add_argument('--checkpoint_dir', dest='checkpoint_dir',  default='checkpoint', help='check point dir')
+parser.add_argument('--checkpoint_dir', dest='checkpoint_dir',  default='/data/private/checkpoint', help='check point dir')
 parser.add_argument('--test_npy_save_dir', dest='test_npy_save_dir',  default='./test/output_npy', help='test numpy file save dir')
 
 #image info
@@ -47,7 +47,7 @@ parser.add_argument('--batch_size', dest='batch_size', type=int,  default=128, h
 #others
 parser.add_argument('--mayo_roi', dest='mayo_roi', type=ut.ParseBoolean, default=True, help='summary ROI sample1,2')
 parser.add_argument('--save_freq', dest='save_freq', type=int, default=2000, help='save a model every save_freq (iteration)')
-parser.add_argument('--print_freq', dest='print_freq', type=int, default=100, help='print_freq (iterations)')
+parser.add_argument('--print_freq', dest='print_freq', type=int, default=10, help='print_freq (iterations)')
 parser.add_argument('--continue_train', dest='continue_train', type=ut.ParseBoolean, default=True, help='load the latest model: true, false')
 parser.add_argument('--gpu_no', dest='gpu_no', type=int,  default=0, help='gpu no')
 
