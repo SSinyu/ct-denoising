@@ -1,11 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Thu Oct 11 11:04:24 2018
-
-@author: yeohyeongyu
-"""
-
-
 import argparse
 import os
 import sys
